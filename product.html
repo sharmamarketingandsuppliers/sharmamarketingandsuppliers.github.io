@@ -1,105 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SMS • Products</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMS • Products</title>
 
-    <script src="product.js"></script>
-    <link rel="stylesheet" href="product.css" />
-  </head>
+  <link rel="shortcut icon" href="company_logo/logo.jpg" type="image/x-icon" />
 
-  <body onscroll="show()">
-    <div class="header">
-      <a href="#top">
-        <div class="bar" onclick="document.body.style.overflow = 'hidden'">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-        </div>
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-        <div
-          id="cross"
-          style="display: none"
-          onclick="document.body.style.overflow = 'auto'"
-        >
-          <div class="bar3"></div>
-          <div class="bar4"></div>
-        </div>
-      </a>
+  <script src="product.js"></script>
+  <link rel="stylesheet" href="product.css" />
+</head>
 
-      <h1 class="h1">Sharma Marketing and Suppliers Pvt. Ltd.</h1>
+<body onscroll="show()">
 
-      <div id="menu">
-        <hr />
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-
-          <li>
-            <a href="ab.html">About</a>
-          </li>
-
-          <li>
-            <a href="product.html" class="active">Products</a>
-          </li>
-
-          <li>
-            <a href="market.html">Market</a>
-          </li>
-
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
-        </ul>
-
-        <div class="clock">
-          <iframe
-            scrolling="no"
-            border="0"
-            frameborder="0"
-            marginwidth="0"
-            marginheight="0"
-            allowtransparency="true"
-            src="https://www.ashesh.com.np/linknepali-time.php?time_only=no&font_color=333333&aj_time=yes&font_size=14&line_brake=1&api=232170o417"
-            width="195"
-            height="45"
-          ></iframe>
-        </div>
+  <div class="header">
+    <a>
+      <div class="bar">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
       </div>
+
+      <div id="cross" style="display: none">
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+      </div>
+    </a>
+
+    <div class="h1">
+      <h1>Sharma Marketing and Suppliers Pvt. Ltd.</h1>
     </div>
 
-    <header>
-      <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="ab.html">About</a>
-        <a href="product.html" class="active">Products</a>
-        <a href="market.html">Market</a>
-        <a href="contact.html">Contact</a>
+    <div class="menu">
+      <!-- <hr /> -->
+
+      <div class="logo">
+        <img src="company_logo/logo.jpg" alt="Company Logo" />
       </div>
-    </header>
 
-    <a href="#top" id="scrolling">Go to Top &#9650;</a>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
 
+        <li>
+          <a href="ab.html">About</a>
+        </li>
+
+        <li>
+          <a href="product.html" class="active">Products</a>
+        </li>
+
+        <li>
+          <a href="career.html">Career</a>
+        </li>
+
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+
+      <div class="clock">
+        <iframe scrolling="no" border="0" frameborder="0" marginwidth="0" marginheight="0" allowtransparency="true"
+          src="https://www.ashesh.com.np/linknepali-time.php?time_only=no&font_color=333333&aj_time=yes&font_size=14&line_brake=1&api=232170o417"
+          width="195" height="45"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="ab.html">About</a>
+      <a href="product.html" class="active">Products</a>
+      <a href="career.html">Career</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <a href="#top" id="scrolling">Go to Top &#9650;</a>
+
+  <br /><br /><br />
+
+  <div id="page">
+
+    <div class="title">
+      <p>Products</p>
+    </div>
+
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slider-item">
+          <img src="product_img/Rijal's-aloo-bhujia.png" alt="Rijal's-aloo-bhujia">
+          <div class="product-info">
+            <h3>Bhujia</h3>
+            <p>Spicy and delicious, Rijal's bhujia is your favorite individual tea-time snack and a go-to pick for your
+              salty hunger craving any time of the day.</p>
+          </div>
+        </div>
+
+        <div class="slider-item">
+          <img src="product_img/navarang-badam-bhujia.png" alt="navarang-badam-bhujia">
+          <div class="product-info">
+            <h3>Navarang Badam Bhujia</h3>
+            <p>With its spicy tone of roasted peanuts and other namkeens, Rijal's delicious Navarang Badam Bhujia is a
+              perfect companion for your parties or just for your stand-alone evening tea.</p>
+          </div>
+        </div>
+
+        <div class="slider-item">
+          <img src="product_img/rijals-furandana.png" alt="rijals-furandana">
+          <div class="product-info">
+            <h3>Rijal's Special Furandana</h3>
+            <p>Gorge on the delicious Furandana from Rijal anytime of the day for a healthy and light snack that serves
+              your hunger right.</p>
+          </div>
+        </div>
+
+        <div class="slider-item">
+          <img src="product_img/navarang-crispy-mathari.png" alt="navarang-crispy-mathari">
+          <div class="product-info">
+            <h3>Navarang Crispy mathari</h3>
+            <p>Crispy and Salted wheat flour snacks, Rijal's Navarang Crispy mathari is all you need whenever you feel
+              like eating something tangy, irresistible yet wholesome.</p>
+          </div>
+        </div>
+
+        <div class="slider-item">
+          <img src="product_img/rijals-special-mixture-dalmoth.png" alt="Rijal's Special Mixture Dalmoth">
+          <div class="product-info">
+            <h3>Rijal's Special Mixture Dalmoth</h3>
+            <p>Corn Flakes Mixture by Navarang is a tasty and delicious mixed snack comprising corn flakes and various
+              namkeens and savories. This is a very filling and wholesome snack that can satisfy even a big hunger.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+
+  </div>
+
+  <footer class="copyright">
+    Copyrights &copy;
     <script>
-      function show() {
-        var x = document.getElementById("scrolling");
-        if (
-          document.body.scrollTop > 80 ||
-          document.documentElement.scrollTop > 80
-        ) {
-          x.style.display = "initial";
-        } else {
-          x.style.display = "none";
-        }
-      }
-    </script>
+      document.write(new Date().getFullYear());
+    </script>. Sharma Marketing and Suppliers Pvt. Ltd. All Rights
+    Reserved.
+  </footer>
 
-  </body>
+  <script>
+    function show() {
+      var x = document.getElementById("scrolling");
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        x.style.display = "initial";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+
 </html>

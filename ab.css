@@ -5,7 +5,7 @@
 }
 
 html {
-  font-family: verdana;
+  font-family: Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -33,7 +33,7 @@ body {
     top: 0;
     width: 100%;
     display: initial;
-    padding: 12px 10px;
+    padding: 8px;
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
   }
@@ -99,18 +99,9 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-  }
+    /* border-bottom: 1px solid #b8b7b7; */
 
-  /* 
-  hr {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    max-width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-  } */
+  }
 
   header {
     display: none;
@@ -160,14 +151,6 @@ body {
     /* border-bottom: 1px solid #b8b7b7; */
   }
 
-  /* div.menu ul li:nth-child(6) {
-    border-bottom: none;
-  }
-
-  div.menu ul li:nth-child(1) {
-    border-top: none;
-  } */
-
   div.menu ul li a:hover {
     color: #3b3b3b;
     /* background-color: rgb(199, 196, 196); */
@@ -192,12 +175,12 @@ body {
   }
 
   div#page {
-    margin-top: 4%;
+    margin-top: 2%;
     margin-bottom: 10px;
   }
 
   div#page div.title p {
-    background-color: rgb(78, 111, 173);
+    background-color: rgb(207, 128, 25);
     color: white;
     margin: 5px 0 5px 0px;
     padding: 8px 5px;
