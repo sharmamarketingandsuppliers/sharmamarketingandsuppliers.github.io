@@ -530,7 +530,9 @@ body {
   }
 
   footer.copyright {
-    background-color: rgb(234, 234, 235);
+    background-color: rgba(255, 255, 255, 0.288);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.685);
     color: #333;
     margin-bottom: 0;
     font-size: 12px;
@@ -901,23 +903,32 @@ body {
   }
 
   #scrolling {
-    font-size: 12px;
-    color: rgb(19, 51, 61);
-    width: 22%;
+    font-size: small;
+    color: rgb(252, 191, 101);
+    width: 20%;
+
+    display: none;
+    /* Hidden by default */
     position: fixed;
-    bottom: 40%;
-    margin-left: 80%;
+    /* Fixed/sticky position */
+    bottom: 40px;
+    /* Place the button at the bottom of the page */
+    right: 20px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    padding: 8px 5px;
-    box-shadow: 0 2px 5px -2px rgba(116, 79, 79, 0.795);
+    padding: 5px;
+    background-color: rgba(63, 11, 22, 0.918);
+    box-shadow: 0 2px 5px -2px rgb(116, 79, 79);
     border: 1px solid rgb(255, 204, 160);
     user-select: none;
-    display: none;
+    cursor: pointer;
   }
 
   #scrolling:active {
-    background-color: rgb(229, 228, 230);
+    background-color: rgba(151, 6, 38, 0.918);
   }
 
   footer.copyright {
