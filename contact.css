@@ -301,27 +301,32 @@ body {
   }
 
   #scrolling {
-    font-size: 12px;
-    color: rgb(19, 51, 61);
-    width: 22%;
-    /* position: fixed; */
-    bottom: 25%;
-    margin-left: 80%;
+    font-size: small;
+    color: rgb(252, 191, 101);
+    width: 20%;
+
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 40px;
+    /* Place the button at the bottom of the page */
+    right: 20px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    padding: 8px 5px;
+    padding: 5px;
+    background-color: rgba(63, 11, 22, 0.918);
     box-shadow: 0 2px 5px -2px rgb(116, 79, 79);
     border: 1px solid rgb(255, 204, 160);
     user-select: none;
-    display: none;
     cursor: pointer;
-    /* left: 0px;
-    top: 0px;
-    z-index: -1; */
   }
 
   #scrolling:active {
-    background-color: rgb(229, 228, 230);
+    background-color: rgba(151, 6, 38, 0.918);
   }
 
   footer.copyright {
