@@ -89,7 +89,6 @@ body {
     color: #5e5d5d;
     text-align: center;
     text-transform: uppercase;
-    font-size: 0.4em;
     left: 0;
     right: 0;
     padding: 7px;
@@ -101,8 +100,7 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    /* border-bottom: 1px solid #b8b7b7; */
-
+    font-size: 14px;
   }
 
   header {
@@ -178,13 +176,13 @@ body {
 
   div#page {
     margin-top: 2%;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
 
   div#page div.title p {
     background-color: rgb(207, 128, 25);
     color: white;
-    margin: 5px 0 5px 0px;
+    margin: 5px 0 10px 0px;
     padding: 8px 5px;
     width: 8em;
     text-align: center;
@@ -198,7 +196,8 @@ body {
   .slider-container {
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 450px;
+    margin: auto;
     overflow: hidden;
     background: #fff;
     border-radius: 10px;
@@ -309,18 +308,20 @@ body {
     background-color: rgba(151, 6, 38, 0.918);
   }
 
-  footer.copyright {
+  /* footer.copyright {
     background-color: rgba(255, 255, 255, 0.288);
     backdrop-filter: blur(8px);
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.685);
     color: #333;
-    margin-bottom: 0;
     font-size: 12px;
     padding: 8px 5px;
     text-align: center;
     font-weight: bold;
     user-select: none;
-  }
+    bottom: 0;
+    display: block;
+  } */
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -710,7 +711,7 @@ body {
     background-color: rgba(151, 6, 38, 0.918);
   }
 
-  footer.copyright {
+  /* footer.copyright {
     background-color: rgba(255, 255, 255, 0.288);
     backdrop-filter: blur(8px);
     box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.685);
@@ -721,7 +722,17 @@ body {
     text-align: center;
     font-weight: bold;
     user-select: none;
+  } */
+
+  .footer-content {
+    flex-direction: column;
   }
+
+  .footer-section {
+    flex: 1 0 100%;
+    padding: 20px 0;
+  }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -1108,4 +1119,98 @@ body {
     user-select: none;
   }
 
+}
+
+/* Footer Styles */
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-section.about {
+  flex: 2;
+}
+
+.footer-section h1 {
+  font-size: 1.5em;
+}
+
+.footer-section h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.footer-section p {
+  margin-bottom: 10px;
+}
+
+.footer-section.links ul {
+  list-style: none;
+}
+
+.footer-section.links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section.links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section.links ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section.contact-form input,
+.footer-section.contact-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-section.contact-form button {
+  background: #555;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-section.contact-form button:hover {
+  background: #666;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  background: #222;
 }
