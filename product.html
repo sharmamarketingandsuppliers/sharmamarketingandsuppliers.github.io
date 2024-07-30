@@ -7,7 +7,9 @@
 
     <link
       rel="shortcut icon"
-      href="logo.jpg" type="image/x-icon" />
+      href="logo.jpg"
+      type="image/x-icon"
+    />
 
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
     <link
@@ -20,8 +22,16 @@
   </head>
 
   <body onscroll="show()">
-    <div class="header">
-      <a>
+    <header>
+      <div class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="ab.html">About</a>
+        <a href="product.html" class="active">Products</a>
+        <a href="career.html">Career</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="menu-bar">
         <div class="bar">
           <div class="bar1"></div>
           <div class="bar2"></div>
@@ -31,70 +41,54 @@
           <div class="bar3"></div>
           <div class="bar4"></div>
         </div>
-      </a>
 
-      <div class="h1">
-        <h1>Sharma Marketing and Suppliers Pvt. Ltd.</h1>
-      </div>
-
-      <div class="menu">
-        <!-- <hr /> -->
-
-        <div class="logo">
-          <img src="logo.jpg" alt="Company Logo" />
+        <div class="h1">
+          <h1>Sharma Marketing and Suppliers Pvt. Ltd.</h1>
         </div>
 
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
+        <div class="menu">
+          <div class="logo">
+            <img src="logo.jpg" alt="Company Logo" />
+          </div>
 
-          <li>
-            <a href="ab.html">About</a>
-          </li>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
 
-          <li>
-            <a href="product.html" class="active">Products</a>
-          </li>
+            <li>
+              <a href="ab.html">About</a>
+            </li>
 
-          <li>
-            <a href="career.html">Career</a>
-          </li>
+            <li>
+              <a href="product.html" class="active">Products</a>
+            </li>
 
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
-        </ul>
+            <li>
+              <a href="career.html">Career</a>
+            </li>
 
-        <div class="clock">
-          <iframe
-            scrolling="no"
-            border="0"
-            frameborder="0"
-            marginwidth="0"
-            marginheight="0"
-            allowtransparency="true"
-            src="https://www.ashesh.com.np/linknepali-time.php?time_only=no&font_color=333333&aj_time=yes&font_size=14&line_brake=1&api=232170o417"
-            width="195"
-            height="45"
-          ></iframe>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <div class="clock">
+            <iframe
+              scrolling="no"
+              border="0"
+              frameborder="0"
+              marginwidth="0"
+              marginheight="0"
+              allowtransparency="true"
+              src="https://www.ashesh.com.np/linknepali-time.php?time_only=no&font_color=333333&aj_time=yes&font_size=14&line_brake=1&api=232170o417"
+              width="195"
+              height="45"
+            ></iframe>
+          </div>
         </div>
-      </div>
-    </div>
-
-    <header>
-      <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="ab.html">About</a>
-        <a href="product.html" class="active">Products</a>
-        <a href="career.html">Career</a>
-        <a href="contact.html">Contact</a>
       </div>
     </header>
-
-    <a href="#top" id="scrolling">Go to Top &#9650;</a>
-
-    <br /><br /><br />
 
     <div id="page">
       <div class="title">
@@ -183,14 +177,6 @@
       </div>
     </div>
 
-    <!-- <footer class="copyright">
-    Copyrights &copy;
-    <script>
-      document.write(new Date().getFullYear());
-    </script>. Sharma Marketing and Suppliers Pvt. Ltd. All Rights
-    Reserved.
-  </footer> -->
-
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -199,7 +185,7 @@
             <h1 class="logo">Sharma Marketing and Suppliers Pvt. Ltd.</h1>
             <br />
             <p>
-              Providing quality goods delivery since 2018. Follow us for more
+              Providing quality goods service since 2018. Follow us for more
               updates and latest news.
             </p>
           </div>
@@ -208,13 +194,13 @@
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="ab.html">About</a></li>
-              <li><a href="product.html">Products</a></li>
+              <li><a href="product.html" class="active">Products</a></li>
               <li><a href="career.html">Career</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
           <div class="footer-section contact-form">
-            <h2>Contact Us</h2>
+            <h2 align="center">Contact Us</h2>
             <form>
               <input type="text" placeholder="Your Name" />
               <input type="email" placeholder="Your Email" />
@@ -226,11 +212,13 @@
       </div>
       <div class="footer-bottom">
         <p>
-          &copy; 2024 Sharma Marketing and Suppliers Pvt. Ltd.. All rights
+          &copy; 2024 Sharma Marketing and Suppliers Pvt. Ltd. All rights
           reserved.
         </p>
       </div>
     </footer>
+
+    <a href="#top" id="scrolling">Go to Top &#9650;</a>
 
     <script>
       function show() {
