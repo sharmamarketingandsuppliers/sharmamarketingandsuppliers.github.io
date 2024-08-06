@@ -5,13 +5,11 @@
 }
 
 html {
-  font-family: verdana;
+  font-family: Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
 }
 
 body {
-  padding: 0;
-  margin: 0;
   -webkit-tap-highlight-color: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -24,8 +22,9 @@ body {
 /* Extra small devices (phones, 600px and down) */
 
 @media only screen and (max-width: 600px) {
-  div.header {
-    background-color: rgba(255, 255, 255, 0.288);
+
+  div.menu-bar {
+    background-color: rgba(255, 255, 255);
     backdrop-filter: blur(8px);
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.685);
     user-select: none;
@@ -36,6 +35,7 @@ body {
     padding: 8px;
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
+    z-index: 99;
   }
 
   div.bar,
@@ -87,11 +87,11 @@ body {
     color: #5e5d5d;
     text-align: center;
     text-transform: uppercase;
-    font-size: 0.3rem;
     left: 0;
     right: 0;
     padding: 7px;
     margin-top: 7px;
+    font-size: 0.390rem;
   }
 
   div.h1 h1 {
@@ -101,7 +101,7 @@ body {
     color: transparent;
   }
 
-  header {
+  div.nav-bar {
     display: none;
     position: static;
   }
@@ -146,6 +146,7 @@ body {
   div.menu ul li {
     margin-left: 5%;
     max-width: 85%;
+    /* border-bottom: 1px solid #b8b7b7; */
   }
 
   div.menu ul li a:hover {
@@ -154,7 +155,7 @@ body {
     text-decoration: underline #945353 2px;
   }
 
-  div.menu ul li a.active {
+  .active {
     color: #3b3b3b;
     font-weight: bold;
     text-decoration: underline #945353 2px;
@@ -167,107 +168,68 @@ body {
     margin: auto;
   }
 
-  div.navbar a {
+  .nav-bar a {
     display: none;
   }
 
-  div#page {
-    margin-top: 2%;
-    margin-bottom: 10px;
-  }
-
-  div#page div.title p {
+  div.title p {
     background-color: rgb(78, 111, 173);
     color: white;
-    margin: 5px 0 5px 0px;
-    padding: 8px 5px;
-    width: 8em;
-    text-align: center;
+    margin-top: 10px;
+    padding: 8px 12px;
+    text-align: right;
+    width: 6em;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     font-weight: bold;
     font-size: small;
+    position: absolute;
+    z-index: 98;
   }
 
-  div#page div.about-text {
-    padding: 20px;
-    max-width: 85%;
-    text-align: start;
-    text-align: end;
-    text-align: left;
-    text-align: right;
-    text-align: center;
-    text-align: justify;
-    color: #fff;
-    font-size: small;
-    border-radius: 10px;
-    line-height: 20px;
-    background-color: rgba(255, 255, 255, 0.336);
-    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
-    color: #333;
-    border: 1px solid rgb(253, 152, 69);
-    display: block;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  div#page div.about-text .profilepic {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.911),
-        rgba(230, 212, 212, 0.5));
-    margin: auto;
-    border-radius: 8px;
-    width: auto;
-    height: 135px;
-    object-fit: cover;
-    display: block;
-    /* position: relative; */
-  }
-
-  div#page div.about-text div.desc-title {
-    background: linear-gradient(180deg, rgb(4, 72, 95), rgb(4, 72, 95));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: underline 1.5px rgb(69, 107, 11);
-  }
-
-  div#page div.contact-info {
+  div.contact-info {
+    transition: box-shadow 0.3s ease;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    max-width: 100%;
     max-width: fit-content;
     display: block;
     background-color: rgba(255, 255, 255, 0.336);
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
     margin: auto;
+    margin-top: 50px;
     border-radius: 15px;
     padding: 15px;
     border: 1px solid rgb(206, 182, 49);
     z-index: 0;
   }
 
-  div#page div.contact-info p {
-    font-size: 0.7rem;
+  div.contact-info:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+
+  div.contact-info p {
+    font-size: 12px;
     color: rgb(43, 43, 41);
     font-weight: bold;
   }
 
-  div#page div.contact-info ul {
+  div.contact-info ul {
     list-style-type: none;
   }
 
-  div#page div.contact-info ul li {
+  div.contact-info ul li {
     margin: 8px;
-    font-size: 0.7rem;
+    font-size: 12px;
   }
 
-  div#page div.contact-info ul li i {
+  div.contact-info ul li i {
     background: none;
     color: rgb(37, 28, 28);
   }
 
-  div#page div.contact-info ul li a {
+  div.contact-info ul li a {
     color: rgb(37, 28, 28);
     text-decoration: none;
     background: none;
@@ -275,198 +237,117 @@ body {
     border-radius: 10px;
   }
 
-  div#page div.contact-info ul li a:hover {
+  div.contact-info ul li a:hover {
     background-color: #a7a4a441;
   }
 
-  #scrolling {
-    font-size: small;
-    color: rgb(252, 191, 101);
-    width: 20%;
-
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Fixed/sticky position */
-    bottom: 40px;
-    /* Place the button at the bottom of the page */
-    right: 20px;
-    /* Place the button 30px from the right */
-    z-index: 99;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    padding: 5px;
-    background-color: rgba(63, 11, 22, 0.918);
-    box-shadow: 0 2px 5px -2px rgb(116, 79, 79);
-    border: 1px solid rgb(255, 204, 160);
-    user-select: none;
-    cursor: pointer;
+  .footer {
+    margin-top: 10px;
   }
 
-  #scrolling:active {
-    background-color: rgba(151, 6, 38, 0.918);
-  }
-
-  footer.copyright {
-    background-color: rgba(255, 255, 255, 0.288);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.685);
-    color: #333;
-    margin-bottom: 0;
-    font-size: 12px;
-    padding: 8px 5px;
-    text-align: center;
-    font-weight: bold;
-    user-select: none;
-  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
 @media only screen and (min-width: 600px) {
-  div.header {
+  .menu-bar {
     display: none;
   }
 
-  header {
+  .nav-bar {
+    width: 100%;
+    position: sticky;
+    top: 0;
     display: initial;
     user-select: none;
   }
 
-  .navbar {
-    width: 100%;
-    position: sticky;
-    top: 0;
-  }
-
-  .navbar a {
+  .nav-bar a {
     text-decoration: none;
     float: left;
     text-align: center;
     width: 20%;
     font-size: 0.8em;
     background-color: rgb(255, 255, 255);
+    color: #666464;
     backdrop-filter: blur(20px);
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
-    color: #666464;
     padding: 15px 8px;
     display: initial;
     font-weight: bold;
     transition: width 5s;
   }
 
-  .navbar a.active {
+  .nav-bar a.active {
     border-bottom: 2px solid rgb(186, 185, 190);
     color: #949292;
   }
 
-  .navbar a:hover {
+  .nav-bar a:hover {
     border-bottom: 2px solid rgb(186, 185, 190);
     color: #949292;
     transition: width 5s;
   }
 
-  div.navbar a {
+  .nav-bar a {
     display: initial;
   }
 
-  div#page {
-    margin-bottom: 10px;
-  }
-
-  div#page div.title p {
+  div.title p {
     background-color: rgb(78, 111, 173);
     color: white;
-    margin: 5px 0 5px 0px;
-    padding: 8px 5px;
-    width: 8em;
-    text-align: center;
+    margin: 5px 0 5px 0;
+    padding: 8px 12px;
+    text-align: right;
+    width: 6.5em;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     font-weight: bold;
-    font-size: small;
-  }
-
-  div#page div.about-text {
-    padding: 20px;
-    max-width: 85%;
-    text-align: start;
-    text-align: end;
-    text-align: left;
-    text-align: right;
-    text-align: center;
-    text-align: justify;
-    color: #fff;
-    font-size: small;
-    border-radius: 10px;
-    line-height: 20px;
-    background-color: rgba(255, 255, 255, 0.336);
-    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
-    color: #333;
-    border: 1px solid rgb(253, 152, 69);
-    display: block;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  div#page div.about-text .profilepic {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.911),
-        rgba(230, 212, 212, 0.5));
-    margin: auto;
-    border-radius: 8px;
-    width: auto;
-    height: 135px;
-    object-fit: cover;
-    display: block;
-    /* position: relative; */
-  }
-
-  div#page div.about-text div.desc-title {
-    background: linear-gradient(180deg, rgb(4, 72, 95), rgb(4, 72, 95));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
     font-size: 14px;
-    font-weight: bold;
-    text-decoration: underline 1.5px rgb(69, 107, 11);
   }
 
-  div#page div.contact-info {
+  div.contact-info {
+    transition: box-shadow 0.3s ease;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    max-width: 100%;
     max-width: fit-content;
     display: block;
+    margin: auto;
     background-color: rgba(255, 255, 255, 0.336);
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
-    margin: auto;
     border-radius: 15px;
     padding: 15px;
     border: 1px solid rgb(206, 182, 49);
     z-index: 0;
   }
 
-  div#page div.contact-info p {
+  div.contact-info:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
+
+  div.contact-info p {
     font-size: 0.9rem;
     color: rgb(43, 43, 41);
     font-weight: bold;
   }
 
-  div#page div.contact-info ul {
+  div.contact-info ul {
     list-style-type: none;
   }
 
-  div#page div.contact-info ul li {
+  div.contact-info ul li {
     margin: 8px;
   }
 
-  div#page div.contact-info ul li i {
+  div.contact-info ul li i {
     background: none;
     color: rgb(37, 28, 28);
     font-size: 14px;
   }
 
-  div#page div.contact-info ul li a {
+  div.contact-info ul li a {
     color: rgb(37, 28, 28);
     text-decoration: none;
     background: none;
@@ -475,77 +356,36 @@ body {
     border-radius: 10px;
   }
 
-  div#page div.contact-info ul li a:hover {
+  div.contact-info ul li a:hover {
     background-color: #a7a4a441;
   }
 
-  #scrolling {
-    font-size: small;
-    color: rgb(252, 191, 101);
-    width: 20%;
-
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Fixed/sticky position */
-    bottom: 40px;
-    /* Place the button at the bottom of the page */
-    right: 20px;
-    /* Place the button 30px from the right */
-    z-index: 99;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    padding: 5px;
-    background-color: rgba(63, 11, 22, 0.918);
-    box-shadow: 0 2px 5px -2px rgb(116, 79, 79);
-    border: 1px solid rgb(255, 204, 160);
-    user-select: none;
-    cursor: pointer;
-  }
-
-  #scrolling:active {
-    background-color: rgba(151, 6, 38, 0.918);
-  }
-
-  footer.copyright {
-    background-color: rgba(255, 255, 255, 0.288);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.685);
-    color: #333;
-    margin-bottom: 0;
-    font-size: 12px;
-    padding: 8px 5px;
-    text-align: center;
-    font-weight: bold;
-    user-select: none;
+  .footer {
+    margin-top: 20px;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
-  div.header {
+  div.menu-bar {
     display: none;
   }
 
-  header {
+  .nav-bar {
+    width: 100%;
+    position: sticky;
+    top: 0;
     display: initial;
     user-select: none;
   }
 
-  .navbar {
-    width: 100%;
-    position: sticky;
-    top: 0;
-  }
-
-  .navbar a {
+  .nav-bar a {
     text-decoration: none;
     float: left;
     text-align: center;
     width: 20%;
-    font-size: 0.8em;
+    font-size: 0.85em;
     background-color: rgb(255, 255, 255);
     backdrop-filter: blur(20px);
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
@@ -556,118 +396,78 @@ body {
     transition: width 5s;
   }
 
-  .navbar a.active {
+  .nav-bar a.active {
     border-bottom: 2px solid rgb(186, 185, 190);
     color: #949292;
   }
 
-  .navbar a:hover {
+  .nav-bar a:hover {
     border-bottom: 2px solid rgb(186, 185, 190);
     color: #949292;
     transition: width 5s;
   }
 
-  div.navbar a {
+  .nav-bar a {
     display: initial;
   }
 
-  div#page {
-    margin-bottom: 10px;
-  }
-
-  div#page div.title p {
+  div.title p {
     background-color: rgb(78, 111, 173);
     color: white;
-    margin: 5px 0 5px 0px;
-    padding: 8px 5px;
-    width: 8em;
-    text-align: center;
+    padding: 8px 12px;
+    text-align: right;
+    width: 6.5em;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     font-weight: bold;
-    font-size: small;
-  }
-
-  div#page div.about-text {
-    padding: 20px;
-    max-width: 85%;
-    text-align: start;
-    text-align: end;
-    text-align: left;
-    text-align: right;
-    text-align: center;
-    text-align: justify;
-    color: #fff;
-    font-size: small;
-    border-radius: 10px;
-    line-height: 20px;
-    background-color: rgba(255, 255, 255, 0.336);
-    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
-    color: #333;
-    border: 1px solid rgb(253, 152, 69);
-    display: block;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  div#page div.about-text .profilepic {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.911),
-        rgba(230, 212, 212, 0.5));
-    margin: auto;
-    border-radius: 8px;
-    width: auto;
-    height: 135px;
-    object-fit: cover;
-    display: block;
-    /* position: relative; */
-  }
-
-  div#page div.about-text div.desc-title {
-    background: linear-gradient(180deg, rgb(4, 72, 95), rgb(4, 72, 95));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
     font-size: 14px;
-    font-weight: bold;
-    text-decoration: underline 1.5px rgb(69, 107, 11);
+    position: absolute;
+    z-index: 98;
   }
 
-  div#page div.contact-info {
+  div.contact-info {
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+    transform: scale(1);
+    transition: transform 0.3s ease;
     max-width: fit-content;
     display: block;
     background-color: rgba(255, 255, 255, 0.336);
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
     margin: auto;
+    margin-top: 30px;
     border-radius: 15px;
     padding: 15px;
     border: 1px solid rgb(206, 182, 49);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     z-index: 0;
   }
 
-  div#page div.contact-info p {
+  div.contact-info:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
+
+  div.contact-info p {
     font-size: 0.9rem;
     color: rgb(43, 43, 41);
     font-weight: bold;
   }
 
-  div#page div.contact-info ul {
+  div.contact-info ul {
     list-style-type: none;
   }
 
-  div#page div.contact-info ul li {
+  div.contact-info ul li {
     margin: 8px;
   }
 
-  div#page div.contact-info ul li i {
+  div.contact-info ul li i {
     background: none;
     color: rgb(37, 28, 28);
     font-size: 14px;
   }
 
-  div#page div.contact-info ul li a {
+  div.contact-info ul li a {
     color: rgb(37, 28, 28);
     text-decoration: none;
     background: none;
@@ -676,77 +476,55 @@ body {
     border-radius: 10px;
   }
 
-  div#page div.contact-info ul li a:hover {
+  div.contact-info ul li a:hover {
     background-color: #a7a4a441;
   }
 
-  #scrolling {
-    font-size: small;
-    color: rgb(252, 191, 101);
-    width: 20%;
-
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Fixed/sticky position */
-    bottom: 40px;
-    /* Place the button at the bottom of the page */
-    right: 20px;
-    /* Place the button 30px from the right */
-    z-index: 99;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    padding: 5px;
-    background-color: rgba(63, 11, 22, 0.918);
-    box-shadow: 0 2px 5px -2px rgb(116, 79, 79);
-    border: 1px solid rgb(255, 204, 160);
-    user-select: none;
-    cursor: pointer;
+  .footer {
+    margin-top: 20px;
   }
 
-  #scrolling:active {
-    background-color: rgba(151, 6, 38, 0.918);
+  .footer-section p {
+    width: 300px;
+    max-width: 100%;
   }
 
-  footer.copyright {
-    background-color: rgba(255, 255, 255, 0.288);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.685);
-    color: #333;
-    margin-bottom: 0;
-    font-size: 12px;
-    padding: 8px 5px;
-    text-align: center;
-    font-weight: bold;
-    user-select: none;
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    flex: 1 0 100%;
+    padding: 20px 0;
+  }
+
+  .footer-section.contact-form {
+    width: 300px;
+    max-width: 100%;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
-  div.header {
+  div.menu-bar {
     display: none;
   }
 
-  header {
+  .nav-bar {
+    width: 100%;
+    position: sticky;
+    top: 0;
     display: initial;
     user-select: none;
   }
 
-  .navbar {
-    width: 100%;
-    position: sticky;
-    top: 0;
-  }
-
-  .navbar a {
+  .nav-bar a {
     text-decoration: none;
     float: left;
     text-align: center;
     width: 20%;
-    font-size: 0.8em;
+    font-size: 0.85em;
     background-color: rgb(255, 255, 255);
     backdrop-filter: blur(20px);
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
@@ -757,118 +535,78 @@ body {
     transition: width 5s;
   }
 
-  .navbar a.active {
+  .nav-bar a.active {
     border-bottom: 2px solid rgb(186, 185, 190);
     color: #949292;
   }
 
-  .navbar a:hover {
+  .nav-bar a:hover {
     border-bottom: 2px solid rgb(186, 185, 190);
     color: #949292;
     transition: width 5s;
   }
 
-  div.navbar a {
+  div.nav-bar a {
     display: initial;
   }
 
-  div#page {
-    margin-bottom: 10px;
-  }
-
-  div#page div.title p {
+  div.title p {
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+    transform: scale(1);
+    transition: transform 0.3s ease;
     background-color: rgb(78, 111, 173);
     color: white;
-    margin: 5px 0 5px 0px;
-    padding: 8px 5px;
-    width: 8em;
-    text-align: center;
+    padding: 8px 12px;
+    text-align: right;
+    width: 6.5em;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     font-weight: bold;
-    font-size: small;
+    font-size: medium;
+    position: absolute;
+    z-index: 98;
   }
 
-  div#page div.about-text {
-    padding: 20px;
-    max-width: 85%;
-    text-align: start;
-    text-align: end;
-    text-align: left;
-    text-align: right;
-    text-align: center;
-    text-align: justify;
-    color: #fff;
-    font-size: small;
-    border-radius: 10px;
-    line-height: 20px;
-    background-color: rgba(255, 255, 255, 0.336);
-    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
-    color: #333;
-    border: 1px solid rgb(253, 152, 69);
-    display: block;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    margin-left: auto;
-    margin-right: auto;
+  div.contact-info:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
   }
 
-  div#page div.about-text .profilepic {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.911),
-        rgba(230, 212, 212, 0.5));
-    margin: auto;
-    border-radius: 8px;
-    width: auto;
-    height: 135px;
-    object-fit: cover;
-    display: block;
-    /* position: relative; */
-  }
-
-  div#page div.about-text div.desc-title {
-    background: linear-gradient(180deg, rgb(4, 72, 95), rgb(4, 72, 95));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: underline 1.5px rgb(69, 107, 11);
-  }
-
-  div#page div.contact-info {
+  div.contact-info {
     max-width: fit-content;
     display: block;
     background-color: rgba(255, 255, 255, 0.336);
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
     margin: auto;
+    margin-top: 30px;
     border-radius: 15px;
     padding: 15px;
     border: 1px solid rgb(206, 182, 49);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     z-index: 0;
   }
 
-  div#page div.contact-info p {
+  div.contact-info p {
     font-size: 0.9rem;
     color: rgb(43, 43, 41);
     font-weight: bold;
   }
 
-  div#page div.contact-info ul {
+  div.contact-info ul {
     list-style-type: none;
   }
 
-  div#page div.contact-info ul li {
+  div.contact-info ul li {
     margin: 8px;
   }
 
-  div#page div.contact-info ul li i {
+  div.contact-info ul li i {
     background: none;
     color: rgb(37, 28, 28);
     font-size: 14px;
   }
 
-  div#page div.contact-info ul li a {
+  div.contact-info ul li a {
     color: rgb(37, 28, 28);
     text-decoration: none;
     background: none;
@@ -877,191 +615,142 @@ body {
     border-radius: 10px;
   }
 
-  div#page div.contact-info ul li a:hover {
+  div.contact-info ul li a:hover {
     background-color: #a7a4a441;
   }
 
-  #scrolling {
-    font-size: small;
-    color: rgb(252, 191, 101);
-    width: 20%;
-
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Fixed/sticky position */
-    bottom: 40px;
-    /* Place the button at the bottom of the page */
-    right: 20px;
-    /* Place the button 30px from the right */
-    z-index: 99;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    padding: 5px;
-    background-color: rgba(63, 11, 22, 0.918);
-    box-shadow: 0 2px 5px -2px rgb(116, 79, 79);
-    border: 1px solid rgb(255, 204, 160);
-    user-select: none;
-    cursor: pointer;
+  .footer {
+    margin-top: 20px;
   }
 
-  #scrolling:active {
-    background-color: rgba(151, 6, 38, 0.918);
+  .footer-section p {
+    width: 500px;
+    max-width: 100%;
   }
 
-  footer.copyright {
-    background-color: rgba(255, 255, 255, 0.288);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.685);
-    color: #333;
-    margin-bottom: 0;
-    font-size: 12px;
-    padding: 8px 5px;
-    text-align: center;
-    font-weight: bold;
-    user-select: none;
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    flex: 1 0 100%;
+    padding: 20px 0;
+  }
+
+  .footer-section.contact-form {
+    width: 500px;
+    max-width: 100%;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  div.menu-bar {
+    display: none;
+  }
 
-  header {
+  .nav-bar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: initial;
     user-select: none;
+    background-color: rgba(255, 255, 255);
+    z-index: 99;
   }
 
-  .navbar {
-    width: 100%;
-    position: sticky;
-    top: 0;
+  .nav-bar .logo-nav img {
+    width: 10%;
+    float: left;
+    display: block;
+    margin-right: 50px;
   }
 
-  .navbar a {
+  .nav-bar a {
     text-decoration: none;
     float: left;
     text-align: center;
-    width: 20%;
+    width: 16.67%;
     font-size: 0.8em;
     background-color: rgb(255, 255, 255);
+    color: #666464;
     backdrop-filter: blur(20px);
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
-    color: #666464;
-    padding: 15px 8px;
+    padding: 20px 8px;
     display: initial;
     font-weight: bold;
     transition: width 5s;
   }
 
-  .navbar a.active {
-    border-bottom: 2px solid rgb(186, 185, 190);
-    color: #949292;
-  }
-
-  .navbar a:hover {
-    border-bottom: 2px solid rgb(186, 185, 190);
-    color: #949292;
+  .nav-bar a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #ff6347;
+    color: #3d2424;
     transition: width 5s;
   }
 
-  div#page {
-    margin-bottom: 10px;
+  .nav-bar a:hover {
+    border-bottom: 2px solid #ff6347;
+    color: #3d2424;
+    transition: width 5s;
   }
 
-  div#page div.title p {
+  div.title p {
     background-color: rgb(78, 111, 173);
     color: white;
-    margin: 5px 0 5px 0px;
-    padding: 10px;
-    width: 10em;
-    text-align: center;
+    margin: 20px 0 5px 0px;
+    padding: 8px 12px;
+    text-align: right;
+    width: 8em;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     font-weight: bold;
-    font-size: medium;
-  }
-
-  div#page div.about-text {
-    padding: 20px;
-    max-width: fit-content;
-    text-align: start;
-    text-align: end;
-    text-align: left;
-    text-align: right;
-    text-align: center;
-    text-align: justify;
-    color: #fff;
-    font-size: small;
-    border-radius: 10px;
-    line-height: 20px;
-    background-color: rgba(255, 255, 255, 0.336);
-    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
-    color: #333;
-    border: 1px solid rgb(253, 152, 69);
-    display: block;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  div#page div.about-text .profilepic {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.911),
-        rgba(230, 212, 212, 0.5));
-    margin: auto;
-    border-radius: 8px;
-    width: auto;
-    height: 135px;
-    object-fit: cover;
-    display: block;
-    /* position: relative; */
-  }
-
-  div#page div.about-text div.desc-title {
-    background: linear-gradient(180deg, rgb(4, 72, 95), rgb(4, 72, 95));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
     font-size: 14px;
-    font-weight: bold;
-    text-decoration: underline 1.5px rgb(69, 107, 11);
   }
 
-  div#page div.contact-info {
+  div.contact-info {
+    transition: box-shadow 0.3s ease;
+    transform: scale(1);
+    transition: transform 0.3s ease;
     max-width: fit-content;
     display: block;
     background-color: rgba(255, 255, 255, 0.336);
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
     margin: auto;
+    margin-top: 30px;
     border-radius: 15px;
     padding: 15px;
     border: 1px solid rgb(206, 182, 49);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     z-index: 0;
   }
 
-  div#page div.contact-info p {
+  .div.contact-info:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
+
+  div.contact-info p {
     font-size: 0.9rem;
     color: rgb(43, 43, 41);
     font-weight: bold;
   }
 
-  div#page div.contact-info ul {
+  div.contact-info ul {
     list-style-type: none;
   }
 
-  div#page div.contact-info ul li {
+  div.contact-info ul li {
     margin: 8px;
   }
 
-  div#page div.contact-info ul li i {
+  div.contact-info ul li i {
     background: none;
     color: rgb(37, 28, 28);
     font-size: 14px;
   }
 
-  div#page div.contact-info ul li a {
+  div.contact-info ul li a {
     color: rgb(37, 28, 28);
     text-decoration: none;
     background: none;
@@ -1070,41 +759,163 @@ body {
     border-radius: 10px;
   }
 
-  div#page div.contact-info ul li a:hover {
+  div.contact-info ul li a:hover {
     background-color: #a7a4a441;
   }
 
-  #scrolling {
-    font-size: 12px;
-    color: rgb(19, 51, 61);
-    width: 22%;
-    position: fixed;
-    bottom: 40%;
-    margin-left: 80%;
-    text-align: center;
-    text-decoration: none;
-    padding: 8px 5px;
-    box-shadow: 0 2px 5px -2px rgba(116, 79, 79, 0.795);
-    border: 1px solid rgb(255, 204, 160);
-    user-select: none;
-    display: none;
+  .footer {
+    margin-top: 20px;
   }
 
-  #scrolling:active {
-    background-color: rgb(229, 228, 230);
+  .footer-section p {
+    width: 600px;
+    max-width: 100%;
   }
 
-  footer.copyright {
-    background-color: rgba(255, 255, 255, 0.288);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.685);
-    color: #333;
-    margin-bottom: 0;
-    font-size: 12px;
-    padding: 8px 5px;
-    text-align: center;
-    font-weight: bold;
-    user-select: none;
+  .footer-content {
+    flex-direction: column;
   }
 
+  .footer-section {
+    flex: 1 0 100%;
+    padding: 20px 0;
+  }
+
+  .footer-section.contact-form {
+    width: 600px;
+    max-width: 100%;
+  }
+
+}
+
+/* Footer Styles */
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-section.about {
+  flex: 2;
+}
+
+.footer-section h1 {
+  font-size: 1.5em;
+}
+
+.footer-section h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.footer-section p {
+  margin-bottom: 10px;
+  text-align: start;
+  text-align: end;
+  text-align: left;
+  text-align: right;
+  text-align: center;
+  text-align: justify;
+}
+
+.footer-section.links ul {
+  list-style: none;
+}
+
+.footer-section.links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section.links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section.links ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section.contact-form input,
+.footer-section.contact-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-section.contact-form button {
+  background: #555;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-section.contact-form button:hover {
+  background: #666;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  background: #222;
+}
+
+.footer-bottom p {
+  font-size: 12px;
+}
+
+#scrolling {
+  font-size: medium;
+  background: rgba(255, 255, 255, 0.973);
+  box-shadow: 0 2px 5px -2px rgb(116, 79, 79);
+  border: 1px solid rgb(128, 155, 241);
+  color: rgba(0, 0, 0, 0.829);
+  width: auto;
+  font-weight: bold;
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 80px;
+  /* Place the button at the bottom of the page */
+  right: 20px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  padding: 5px;
+  user-select: none;
+  cursor: pointer;
+}
+
+#scrolling:active {
+  background: #bbbbbb;
 }

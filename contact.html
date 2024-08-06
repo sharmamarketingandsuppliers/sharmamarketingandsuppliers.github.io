@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SMS • Contact</title>
 
-    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMS • Contact</title>
 
-    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+  <link rel="shortcut icon" href="company_logo/sms.png" type="image/x-icon" />
 
-    <script src="contact.js"></script>
-    <link rel="stylesheet" href="contact.css" />
-  </head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <body onscroll="show()">
-    <div class="header">
-      <a>
-        <div class="bar">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-        </div>
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-        <div
-          id="cross"
-          style="display: none"
-          onclick="document.body.style.overflow = 'auto'"
-        >
-          <div class="bar3"></div>
-          <div class="bar4"></div>
-        </div>
-      </a>
+  <script src="scripts/contact.js"></script>
+  <link rel="stylesheet" href="styles/contact.css" />
+</head>
+
+<body onscroll="show()">
+
+  <header>
+    <div class="nav-bar">
+      <div class="logo-nav">
+        <img src="company_logo/logo_bg_transparent.png" alt="Company Logo" />
+      </div>
+      <a href="index.html">Home</a>
+      <a href="ab.html">About</a>
+      <a href="product.html">Products</a>
+      <a href="career.html">Career</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+
+    <div class="menu-bar">
+      <div class="bar">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+      </div>
+
+      <div id="cross" style="display: none">
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+      </div>
+
       <div class="h1">
         <h1>Sharma Marketing and Suppliers Pvt. Ltd.</h1>
       </div>
-      <div class="menu">
-        <!-- <hr /> -->
 
+      <div class="menu">
         <div class="logo">
-          <img src="logo.jpg" alt="Company Logo" />
+          <img src="company_logo/logo.jpg" alt="Company Logo" />
         </div>
 
         <ul>
@@ -65,99 +72,108 @@
             <a href="contact.html" class="active">Contact</a>
           </li>
         </ul>
-        <br /><br />
+
         <div class="clock">
-          <iframe
-            scrolling="no"
-            border="0"
-            frameborder="0"
-            marginwidth="0"
-            marginheight="0"
-            allowtransparency="true"
+          <iframe scrolling="no" border="0" frameborder="0" marginwidth="0" marginheight="0" allowtransparency="true"
             src="https://www.ashesh.com.np/linknepali-time.php?time_only=no&font_color=333333&aj_time=yes&font_size=14&line_brake=1&api=232170o417"
-            width="195"
-            height="45"
-          ></iframe>
+            width="195" height="45"></iframe>
         </div>
       </div>
     </div>
+  </header>
 
-    <header>
-      <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="ab.html">About</a>
-        <a href="product.html">Products</a>
-        <a href="career.html">Career</a>
-        <a href="contact.html" class="active">Contact</a>
-      </div>
-    </header>
+  <br><br><br>
 
-    <a href="#top" id="scrolling">Go to Top &#9650;</a>
+  <div class="title">
+    <p>Contact</p>
+  </div>
 
-    <br /><br /><br />
+  <div class="contact-info">
+    <p>You can contact us at the following address :</p>
+    <ul>
+      <li>
+        <i class="fa fa-location-arrow"></i>&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="https://goo.gl/maps/HPAGFaNSNi1ZNMRT6">
+          JeetpurSimara-02, Simara, Bara</a>
+      </li>
+      <li>
+        <i class="fa fa-phone"></i> &nbsp;
+        <a href="tel:+977-9843839007"> +977-9843839007</a>
+      </li>
+      <li>
+        <i class="fa fa-envelope"></i>&nbsp;&nbsp;
+        <a href="mailto:sharmamarketingandsuppliers@gmail.com">sharmamarketingandsuppliers@gmail.com</a>
+      </li>
+      <li>
+        <i class="fa fa-whatsapp"></i>&nbsp;&nbsp;
+        <a target="_blank"
+          href="https://wa.me/9779843839007?text=I'm%20interested%20in%20your%20product%20.">+977-9843839007</a>
+      </li>
+      <li>
+        <i class="fa fa-facebook-f"></i>&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="">Sharma Marketing and Suppliers Pvt. Ltd.</a>
+      </li>
+    </ul>
+  </div>
 
-    <div id="page">
-      <div class="title">
-        <p>Contact</p>
-      </div>
-
-      <div class="contact-info">
-        <p>You can contact us at the following address :</p>
-        <ul>
-          <li>
-            <i class="fa fa-location-arrow"></i>&nbsp;&nbsp;&nbsp;
-            <a target="_blank" href="https://goo.gl/maps/HPAGFaNSNi1ZNMRT6">
-              JeetpurSimara-02, Simara, Bara</a
-            >
-          </li>
-          <li>
-            <i class="fa fa-phone"></i> &nbsp;
-            <a href="tel:+977-9843839007"> +977-9843839007</a>
-          </li>
-          <li>
-            <i class="fa fa-envelope"></i>&nbsp;&nbsp;
-            <a href="mailto:sharmamarketingandsuppliers@gmail.com"
-              >sharmamarketingandsuppliers@gmail.com</a
-            >
-          </li>
-          <li>
-            <i class="fa fa-whatsapp"></i>&nbsp;&nbsp;
-            <a
-              target="_blank"
-              href="https://wa.me/9779843839007?text=I'm%20interested%20in%20your%20product%20."
-              >+977-9843839007</a
-            >
-          </li>
-          <li>
-            <i class="fa fa-facebook-f"></i>&nbsp;&nbsp;&nbsp;
-            <a target="_blank" href=""
-              >Sharma Marketing and Suppliers Pvt. Ltd.</a
-            >
-          </li>
-        </ul>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h1>Sharma Marketing and Suppliers Pvt. Ltd.</h1>
+          <br />
+          <p>
+            Providing quality goods service since 2018. Follow us for more
+            updates and latest news.
+          </p>
+        </div>
+        <div class="footer-section links">
+          <h2>Links</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ab.html">About</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact-form">
+          <h2>Contact Us</h2>
+          <form>
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Your Email" />
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
       </div>
     </div>
+    <div class="footer-bottom">
+      <p>
+        &copy; 2024 Sharma Marketing and Suppliers Pvt. Ltd. All rights
+        reserved.
+      </p>
+    </div>
+  </footer>
 
-    <footer class="copyright">
-      Copyrights &copy;
-      <script>
-        document.write(new Date().getFullYear());
-      </script>. Sharma Marketing and Suppliers Pvt. Ltd. All Rights
-      Reserved.
-    </footer>
+  <a href="#top" id="scrolling" title>
+    <i class="material-icons">&#xe316;</i>
+  </a>
 
-    <script>
-      function show() {
-        var x = document.getElementById("scrolling");
-        if (
-          document.body.scrollTop > 80 ||
-          document.documentElement.scrollTop > 80
-        ) {
-          x.style.display = "initial";
-        } else {
-          x.style.display = "none";
-        }
+  <script>
+    function show() {
+      var x = document.getElementById("scrolling");
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        x.style.display = "initial";
+      } else {
+        x.style.display = "none";
       }
-    </script>
-  </body>
+    }
+  </script>
+</body>
+
 </html>

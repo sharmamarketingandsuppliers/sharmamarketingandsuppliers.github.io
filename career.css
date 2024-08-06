@@ -5,13 +5,11 @@
 }
 
 html {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
 }
 
 body {
-  padding: 0;
-  margin: 0;
   -webkit-tap-highlight-color: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -21,27 +19,23 @@ body {
   color: #ffffff;
 }
 
-div.header {
-  display: none;
-}
+/* Extra small devices (phones, 600px and down) */
 
-@media screen and (max-width: 500px) {
-  div.header {
-    background-color: rgb(255, 255, 255);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
+@media only screen and (max-width: 600px) {
+
+  div.menu-bar {
+    background-color: rgba(255, 255, 255);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.685);
     user-select: none;
     position: fixed;
     top: 0;
     width: 100%;
     display: initial;
-    padding: 15px 10px;
+    padding: 8px;
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
-  }
-
-  div#page {
-    margin-top: 6%;
+    z-index: 99;
   }
 
   div.bar,
@@ -54,14 +48,16 @@ div.header {
     padding: 7px;
   }
 
-  div.bar:hover, div#cross:hover {
+  div.bar:hover,
+  div#cross:hover {
     background-color: rgb(229, 228, 230);
     padding: 7px;
     border-radius: 10px;
     width: auto;
   }
 
-  div.bar:active, div#cross:active {
+  div.bar:active,
+  div#cross:active {
     background-color: rgb(235, 235, 235);
     padding: 7px;
     border-radius: 10px;
@@ -87,252 +83,783 @@ div.header {
     transform: rotate(-135deg) translate(2.8px, 2.5px);
   }
 
-  h1.h1 {
+  div.h1 {
     color: #5e5d5d;
     text-align: center;
     text-transform: uppercase;
-    font-size: 0.8em;
     left: 0;
     right: 0;
     padding: 7px;
     margin-top: 7px;
+    font-size: 0.390rem;
   }
 
-  hr {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    background: #aaa;
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
+  div.h1 h1 {
+    background: linear-gradient(180deg, rgb(12, 74, 95), rgb(6, 119, 156));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 
-  header {
+  div.nav-bar {
     display: none;
     position: static;
   }
 
-  div#menu {
-    display: none;
-    height: 100vh;
-    margin-left: 50px;
-  }
-
-  #menu ul {
-    list-style-type: none;
-    font-family: sans-serif;
-  }
-
-  #menu ul li a {
+  div.logo img {
+    float: right;
     display: block;
-    color: #9c9c9c;
-    padding: 12px 2px;
+    max-width: 35%;
+    margin: 10px;
+    margin-right: 25%;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: #dfa6a6e5;
+    transition: background-color 0.3s;
+  }
+
+  div.menu {
+    display: none;
+    /* height: 100vh; */
+    margin-left: 50px;
+    max-height: fit-content;
+    margin-top: 20px;
+  }
+
+  div.menu ul {
+    list-style-type: none;
+    max-width: fit-content;
+  }
+
+  div.menu ul li a {
+    display: block;
+    padding: 5px;
+    color: #5f5e5e;
+    padding: 12px 5px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     user-select: none;
     cursor: pointer;
+    border-radius: 5px;
   }
 
-  #menu ul li {
-    border-bottom: 1px solid #b8b7b7;
+  div.menu ul li {
     margin-left: 5%;
     max-width: 85%;
+    /* border-bottom: 1px solid #b8b7b7; */
   }
 
-  #menu ul li:nth-child(6) {
-    border-bottom: none;
+  div.menu ul li a:hover {
+    color: #3b3b3b;
+    /* background-color: rgb(199, 196, 196); */
+    text-decoration: underline #945353 2px;
   }
 
-  #menu ul li:nth-child(1) {
-    border-top: none;
-  }
-
-  #menu ul li a:hover {
-    color: #636363;
-  }
-
-  #menu ul li a.active {
-    color: #636363;
-  }
-
-  div#menu div.clock {
-    margin-top: 50px;
-    text-align: center;
+  .active {
+    color: #3b3b3b;
     font-weight: bold;
-    font-size: 0.8em;
-    padding: 10px 5px;
-    color: rgba(85, 84, 84, 0.932);
-    /* background: linear-gradient(180deg, lightBlue, deepSkyBlue);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent; */
-    letter-spacing: 2px;
+    text-decoration: underline #945353 2px;
   }
 
-  div.navbar a {
-    display: none;
-  }
-
-  a#scrolling {
-    font-size: 12px;
-    color: deepSkyBlue;
-    width: 22%;
-    text-align: center;
-    text-decoration: none;
+  div.menu div.clock {
     padding: 8px 5px;
-    background-color: #333;
-    user-select: none;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.664);
+    max-width: fit-content;
+    margin: auto;
+  }
+
+  div.nav-bar a {
     display: none;
-    position: fixed;
-    text-align: center;
-    top: initial;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 1;
   }
 
-  a#scrolling:active {
-    font-size: 10px;
-  }
-}
-
-header {
-  display: initial;
-  user-select: none;
-}
-
-.navbar {
-  width: 100%;
-  position: sticky;
-  top: 0;
-}
-
-.navbar a {
-  text-decoration: none;
-  float: left;
-  text-align: center;
-  width: 20%;
-  font-size: 0.8em;
-  background-color: rgb(255, 255, 255);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
-  color: #666464;
-  padding: 15px 8px;
-  display: initial;
-  font-weight: bold;
-  transition: width 5s;
-}
-
-.navbar a.active {
-  border-bottom: 2px solid rgb(186, 185, 190);
-  color: #949292;
-}
-
-.navbar a:hover {
-  border-bottom: 2px solid rgb(186, 185, 190);
-  color: #949292;
-  transition: width 5s;
-}
-
-/* div.p1 {
-    padding: 10px 12px;
-    background-color: darkslateblue;
-    color: lavender;
-    margin: 6px 8px;
-    font-size: 15px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    text-align: center;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-  }
-  
-  div.p2 {
-    padding: 10px 12px;
-    background-color: darkslateblue;
-    color: lavender;
-    margin: 6px 8px;
-    font-size: 15px;
-    text-align: center;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    font-size: 15px;
-  }
-  
-  div.p3 {
-    padding: 10px 12px;
-    background-color: darkslateblue;
-    color: lavender;
-    margin: 6px 8px;
-    font-size: 15px;
-    width: 80%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-  } */
-/* 
-  .number {
-    background-color: slateBlue;
-    padding: 8px;
-    color: #ddd;
-    max-width: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
+  div.title p {
+    background-color: rgb(207, 128, 25);
+    color: white;
+    margin-top: 10px;
+    padding: 8px 5px;
+    width: 8em;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
     font-weight: bold;
+    font-size: small;
+    position: absolute;
+    z-index: 98;
+  }
+
+  div.about-text {
+    padding: 20px;
+    max-width: 85%;
+    text-align: start;
+    text-align: end;
+    text-align: left;
+    text-align: right;
+    text-align: center;
+    text-align: justify;
+    color: #fff;
+    font-size: small;
+    border-radius: 10px;
+    line-height: 20px;
+    background-color: rgba(255, 255, 255, 0.336);
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
+    color: #333;
+    border: 1px solid rgb(253, 152, 69);
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.about-text .profilepic {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.911),
+        rgba(230, 212, 212, 0.5));
+    margin: auto;
+    border-radius: 8px;
+    width: auto;
+    height: 135px;
+    object-fit: cover;
+    display: block;
+    /* position: relative; */
+  }
+
+  div.about-text div.desc-title {
+    background: linear-gradient(180deg, rgb(4, 72, 95), rgb(4, 72, 95));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline 1.5px rgb(69, 107, 11);
+  }
+
+  .footer {
+    margin-top: 10px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+  .menu-bar {
+    display: none;
+  }
+
+  .nav-bar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: initial;
     user-select: none;
+  }
+
+  .nav-bar a {
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    width: 20%;
+    font-size: 0.8em;
+    background-color: rgb(255, 255, 255);
+    color: #666464;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
+    padding: 15px 8px;
+    display: initial;
+    font-weight: bold;
+    transition: width 5s;
+  }
+
+  .nav-bar a.active {
+    border-bottom: 2px solid rgb(186, 185, 190);
+    color: #949292;
+  }
+
+  .nav-bar a:hover {
+    border-bottom: 2px solid rgb(186, 185, 190);
+    color: #949292;
+    transition: width 5s;
+  }
+
+  .nav-bar a {
+    display: initial;
+  }
+
+  div.title p {
+    background-color: rgb(207, 128, 25);
+    color: white;
+    margin: 5px 0 5px 0px;
+    padding: 8px 5px;
+    width: 8em;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-weight: bold;
+    font-size: medium;
+  }
+
+  div.about-text {
+    padding: 20px;
+    max-width: 85%;
+    text-align: start;
+    text-align: end;
+    text-align: left;
+    text-align: right;
+    text-align: center;
+    text-align: justify;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 10px;
+    line-height: 20px;
+    background-color: rgba(255, 255, 255, 0.336);
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
+    color: #333;
+    border: 1px solid rgb(253, 152, 69);
+    display: block;
     margin-top: 8px;
-  } */
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.about-text .profilepic {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.911),
+        rgba(230, 212, 212, 0.5));
+    margin: auto;
+    border-radius: 8px;
+    width: auto;
+    height: 135px;
+    object-fit: cover;
+    display: block;
+    /* position: relative; */
+  }
+
+  div.about-text div.desc-title {
+    background: linear-gradient(180deg, rgb(4, 72, 95), rgb(4, 72, 95));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline 1.5px rgb(69, 107, 11);
+  }
+
+  .footer {
+    margin-top: 10px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+  div.menu-bar {
+    display: none;
+  }
+
+  .nav-bar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: initial;
+    user-select: none;
+  }
+
+  .nav-bar a {
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    width: 20%;
+    font-size: 0.9em;
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
+    color: #666464;
+    padding: 15px 8px;
+    display: initial;
+    font-weight: bold;
+    transition: width 5s;
+  }
+
+  .nav-bar a.active {
+    border-bottom: 2px solid rgb(186, 185, 190);
+    color: #949292;
+  }
+
+  .nav-bar a:hover {
+    border-bottom: 2px solid rgb(186, 185, 190);
+    color: #949292;
+    transition: width 5s;
+  }
+
+  .nav-bar a {
+    display: initial;
+  }
+
+  div.title p {
+    background-color: rgb(207, 128, 25);
+    color: white;
+    padding: 8px 5px;
+    width: 8em;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    z-index: 98;
+  }
+
+  div.about-text {
+    padding: 20px;
+    width: 500px;
+    max-width: 100%;
+    text-align: start;
+    text-align: end;
+    text-align: left;
+    text-align: right;
+    text-align: center;
+    text-align: justify;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 10px;
+    line-height: 20px;
+    background-color: rgba(255, 255, 255, 0.336);
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
+    color: #333;
+    border: 1px solid rgb(253, 152, 69);
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.about-text div.desc-title {
+    background: linear-gradient(180deg, rgb(4, 72, 95), rgb(4, 72, 95));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline 1.5px rgb(69, 107, 11);
+  }
+
+  div.about-text .profilepic {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.911),
+        rgba(230, 212, 212, 0.5));
+    margin: auto;
+    border-radius: 8px;
+    width: auto;
+    height: 135px;
+    object-fit: cover;
+    display: block;
+    /* position: relative; */
+  }
+
+  .footer-section p {
+    width: 300px;
+    max-width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    flex: 1 0 100%;
+    padding: 20px 0;
+  }
+
+  .footer-section.contact-form {
+    width: 300px;
+    max-width: 100%;
+  }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+  div.menu-bar {
+    display: none;
+  }
+
+  .nav-bar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: initial;
+    user-select: none;
+  }
+
+  .nav-bar a {
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    width: 20%;
+    font-size: 0.8em;
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
+    color: #666464;
+    padding: 15px 8px;
+    display: initial;
+    font-weight: bold;
+    transition: width 5s;
+  }
+
+  .nav-bar a.active {
+    border-bottom: 2px solid rgb(186, 185, 190);
+    color: #949292;
+  }
+
+  .nav-bar a:hover {
+    border-bottom: 2px solid rgb(186, 185, 190);
+    color: #949292;
+    transition: width 5s;
+  }
+
+  div.nav-bar a {
+    display: initial;
+  }
+
+  div.title p {
+    background-color: rgb(207, 128, 25);
+    color: white;
+    padding: 8px 5px;
+    width: 8em;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-weight: bold;
+    font-size: medium;
+    position: absolute;
+    z-index: 98;
+  }
+
+  div.about-text {
+    padding: 20px;
+    width: 600px;
+    max-width: 100%;
+    text-align: start;
+    text-align: end;
+    text-align: left;
+    text-align: right;
+    text-align: center;
+    text-align: justify;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 10px;
+    line-height: 20px;
+    background-color: rgba(255, 255, 255, 0.336);
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
+    color: #333;
+    border: 1px solid rgb(253, 152, 69);
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.about-text .profilepic {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.911),
+        rgba(230, 212, 212, 0.5));
+    margin: auto;
+    border-radius: 8px;
+    width: auto;
+    height: 135px;
+    object-fit: cover;
+    display: block;
+    /* position: relative; */
+  }
+
+  div.about-text div.desc-title {
+    background: linear-gradient(180deg, rgb(4, 72, 95), rgb(4, 72, 95));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline 1.5px rgb(69, 107, 11);
+  }
+
+  .footer-section p {
+    width: 500px;
+    max-width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    flex: 1 0 100%;
+    padding: 20px 0;
+  }
+
+  .footer-section.contact-form {
+    width: 500px;
+    max-width: 100%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  div.menu-bar {
+    display: none;
+  }
+
+  .nav-bar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: initial;
+    user-select: none;
+    background-color: rgba(255, 255, 255);
+    z-index: 99;
+  }
+
+  .nav-bar .logo-nav img {
+    width: 10%;
+    float: left;
+    display: block;
+    margin-right: 50px;
+  }
+
+  .nav-bar a {
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    width: 16.67%;
+    font-size: 0.8em;
+    background-color: rgb(255, 255, 255);
+    color: #666464;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
+    padding: 20px 8px;
+    display: initial;
+    font-weight: bold;
+    transition: width 5s;
+  }
+
+  .nav-bar a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #ff6347;
+    color: #3d2424;
+    transition: width 5s;
+  }
+
+  .nav-bar a:hover {
+    border-bottom: 2px solid #ff6347;
+    color: #3d2424;
+    transition: width 5s;
+  }
+
+  div.title p {
+    background-color: rgb(207, 128, 25);
+    color: white;
+    margin: 20px 0 5px 0px;
+    padding: 8px 12px;
+    text-align: right;
+    width: 8em;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  div.about-text {
+    padding: 20px;
+    width: 800px;
+    max-width: 100%;
+    text-align: start;
+    text-align: end;
+    text-align: left;
+    text-align: right;
+    text-align: center;
+    text-align: justify;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 10px;
+    line-height: 20px;
+    background-color: rgba(255, 255, 255, 0.336);
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
+    color: #333;
+    border: 1px solid rgb(253, 152, 69);
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.about-text .profilepic {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.911),
+        rgba(230, 212, 212, 0.5));
+    margin: auto;
+    border-radius: 8px;
+    width: auto;
+    height: 135px;
+    object-fit: cover;
+    display: block;
+    /* position: relative; */
+  }
+
+  div.about-text div.desc-title {
+    background: linear-gradient(180deg, rgb(4, 72, 95), rgb(4, 72, 95));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: medium;
+    font-weight: bold;
+    text-decoration: underline 1.5px rgb(69, 107, 11);
+  }
+
+  .footer-section p {
+    width: 600px;
+    max-width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    flex: 1 0 100%;
+    padding: 20px 0;
+  }
+
+  .footer-section.contact-form {
+    width: 600px;
+    max-width: 100%;
+  }
+}
+
+/* Footer Styles */
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-section.about {
+  flex: 2;
+}
+
+.footer-section h1 {
+  font-size: 1.5em;
+}
+
+.footer-section h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.footer-section p {
+  margin-bottom: 10px;
+  text-align: start;
+  text-align: end;
+  text-align: left;
+  text-align: right;
+  text-align: center;
+  text-align: justify;
+}
+
+.footer-section.links ul {
+  list-style: none;
+}
+
+.footer-section.links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section.links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section.links ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section.contact-form input,
+.footer-section.contact-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-section.contact-form button {
+  background: #555;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-section.contact-form button:hover {
+  background: #666;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  background: #222;
+}
+
+.footer-bottom p {
+  font-size: 12px;
+}
 
 #scrolling {
-  font-size: 12px;
-  color: deepSkyBlue;
-  width: 12%;
+  font-size: medium;
+  background: rgba(255, 255, 255, 0.973);
+  box-shadow: 0 2px 5px -2px rgb(116, 79, 79);
+  border: 1px solid rgb(128, 155, 241);
+  color: rgba(0, 0, 0, 0.829);
+  width: auto;
+  font-weight: bold;
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 80px;
+  /* Place the button at the bottom of the page */
+  right: 20px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  border-radius: 5px;
   text-align: center;
   text-decoration: none;
-  padding: 8px 5px;
-  background-color: #333;
+  padding: 5px;
   user-select: none;
-  display: none;
-  position: fixed;
-  top: 60%;
-  right: 0;
-  z-index: 1;
+  cursor: pointer;
 }
 
 #scrolling:active {
-  font-size: 10px;
-}
-
-footer {
-  background-color: darkslateblue;
-  /* color: ; */
-  padding: 8px 5px;
-}
-
-p.copyright {
-  background: linear-gradient(90deg, yellow, gold, yellow);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  padding: 3px;
-  text-align: center;
-  font-weight: bold;
-  user-select: none;
+  background: #bbbbbb;
 }
