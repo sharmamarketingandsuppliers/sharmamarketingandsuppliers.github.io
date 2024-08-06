@@ -154,10 +154,23 @@ body {
     display: none;
   }
 
+  div.scrolling-text {
+    margin: 10px;
+    overflow: hidden;
+    padding: 5px;
+    border: 2px solid rgb(142, 112, 250);
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  div.scrolling-text marquee {
+    color: #222;
+    font-size: 14px;
+  }
+
   div.title p {
     background-color: rgba(1, 9, 77, 0.822);
     color: white;
-    margin-top: 10px;
     padding: 8px 12px;
     text-align: right;
     width: 8em;
@@ -169,37 +182,31 @@ body {
     z-index: 98;
   }
 
-  main section.container {
-    transition: box-shadow 0.3s ease;
-    transform: scale(1);
-    transition: transform 0.3s ease;
-    padding: 30px;
-    max-width: 100%;
-    width: 400px;
+  div.intro {
+    border: 2px solid cornflowerblue;
+    padding: 8px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.8);
+    margin: auto;
+    margin-top: 60px;
+  }
+
+  div.intro p {
     text-align: start;
     text-align: end;
     text-align: left;
     text-align: right;
     text-align: center;
     text-align: justify;
-    color: #fff;
     font-size: 14px;
-    border-radius: 10px;
-    line-height: 20px;
-    background-color: rgba(9, 27, 185, 0.164);
-    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
-    color: #333;
-    border: 2px solid rgb(35, 149, 241);
-    display: block;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
-  main section.container:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1);
+  .footer {
+    margin-top: 15px;
   }
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
