@@ -52,6 +52,7 @@ body {
   div.bar:hover,
   div#cross:hover {
     background-color: rgb(229, 228, 230);
+    color: white;
     padding: 7px;
     border-radius: 10px;
     width: auto;
@@ -63,6 +64,7 @@ body {
     padding: 7px;
     border-radius: 10px;
     width: auto;
+    color: white;
   }
 
   div.bar1,
